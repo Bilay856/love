@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Послание из Вселенной ✨</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="stars"></div>
+
+<!-- ЭКРАН 1 -->
+<section class="screen active" id="welcome">
+    <div class="panel">
+        <div class="kicker">МАЛЕНЬКОЕ ПУТЕШЕСТВИЕ</div>
+        <h1>Тебе пришло<br>послание</h1>
+        <p>Иногда целая Вселенная начинается с одного слова.</p>
+
+        <div class="envelope-wrap" id="firstEnvelope">
+            <div class="envelope">
+                <div class="flap"></div>
+                <div class="seal">✦</div>
+            </div>
+        </div>
+
+        <button class="btn" id="openFirst">Открыть письмо</button>
+    </div>
+</section>
+
+<!-- ЭКРАН 2 -->
+<section class="screen" id="inputScreen">
+    <div class="panel">
+        <div class="kicker">ТВОЁ СЛОВО</div>
+        <h2>О чём думаешь?</h2>
+        <p>Напиши любое слово, которое первым пришло тебе в голову.</p>
+
+        <form id="wordForm">
+            <input
+                type="text"
+                id="wordInput"
+                placeholder="Напиши своё слово..."
+                maxlength="32"
+                autocomplete="off"
+                required
+            >
+            <button class="btn" type="submit">
+                Отправить во Вселенную ✨
+            </button>
+        </form>
+    </div>
+</section>
+
+<!-- ЭКРАН 3: ГАЛАКТИКА И ПОРТРЕТ -->
+<section class="screen" id="universeScreen">
+    <div class="universe-panel">
+        <div class="kicker">INFINITE WORDS</div>
+        <h2 id="galaxyTitle">Твоя Вселенная</h2>
+        <p id="universeDescription">Вращай галактику мышкой или пальцем</p>
+
+        <div class="universe-container">
+            <canvas id="universeCanvas"></canvas>
+        </div>
+
+        <p id="translationStatus">Создаём Вселенную...</p>
+
+        <div class="universe-controls" id="galaxyControls">
+            <button class="btn secondary" id="zoomOut">−</button>
+            <button class="btn secondary" id="zoomIn">+</button>
+            <button class="btn secondary" id="resetUniverse">Сбросить</button>
+        </div>
+
+        <div class="portrait-tools">
+            <label class="upload">
+                ✧ Выбрать фотографию
+                <input type="file" id="photoInput" accept="image/*">
+            </label>
+
+            <p id="photoStatus">Сначала выбери фотографию</p>
+
+            <button class="btn" id="createPortrait" disabled>
+                Собрать портрет из слов ✨
+            </button>
+
+            <button class="btn" id="toFinal" disabled>
+                Далее →
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- ЭКРАН 4 -->
+<section class="screen" id="finalScreen">
+    <div class="panel">
+        <div class="kicker">ПОСЛЕДНЕЕ ПОСЛАНИЕ</div>
+        <h2>Ещё одно письмо...</h2>
+
+        <div class="envelope-wrap" id="lastEnvelope">
+            <div class="envelope">
+                <div class="flap"></div>
+                <div class="seal">♥</div>
+            </div>
+        </div>
+
+        <button class="btn" id="openLast">Открыть письмо</button>
+
+        <div class="letter" id="finalLetter" hidden>
+            <p>
+                Есть слова, которые звучат на разных
+                языках, но всё равно находят дорогу к сердцу.
+            </p>
+
+            <p>
+                И есть люди, рядом с которыми даже
+                обычный день становится особенным.
+            </p>
+
+            <p>
+                Иногда достаточно одной улыбки,
+                одного взгляда или простого сообщения,
+                чтобы мир вокруг стал немного светлее.
+            </p>
+
+            <p>
+                Пусть у тебя всегда будет место
+                для маленьких чудес, смелых мечтаний
+                и искренних чувств.
+            </p>
+
+            <p>
+                Среди миллиардов звёзд
+                твоя история остаётся неповторимой.
+            </p>
+
+            <p class="signature">С теплом и нежностью ❤️</p>
+        </div>
+
+        <button class="restart" id="restart">Начать сначала</button>
+    </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
