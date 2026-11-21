@@ -7,7 +7,7 @@ const screens = document.querySelectorAll(".screen");
 const universeCanvas = document.getElementById("universeCanvas");
 const ctx = universeCanvas.getContext("2d");
 
-const PARTICLE_COUNT = 500;
+const PARTICLE_COUNT = 100;
 
 const BASE_TILT = 1.0;
 const BASE_ROLL = -0.45;
